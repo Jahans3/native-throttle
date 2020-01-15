@@ -6,9 +6,9 @@ Supports both trailing and leading edge calls.
 * [Installation](#Installation)
 * [Development](#Development)
 * [Usage](#Usage)
-    * [Basic Usage](#Basic&#32;Usage)
-    * [Trailing or Leading Edge](#Trailing&#32;or&#32;LeadingEdge)
-    * [React Hooks](#React&#32;Hooks)
+    * [Basic Usage](#Basic%20Usage)
+    * [Trailing or Leading Edge](#Trailing%20or%20LeadingEdge)
+    * [React Hooks](#React%20Hooks)
     * [API](#API)
 
 ## Installation
