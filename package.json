@@ -1,0 +1,16 @@
+{
+  "name": "native-throttle",
+  "version": "0.0.1",
+  "description": "Simple throttle function for use in the browser",
+  "main": "index.js",
+  "author": "Joshua Jahans",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "sinon": "^8.0.4"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
