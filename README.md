@@ -6,9 +6,9 @@ Supports both trailing and leading edge calls.
 * [Installation](#Installation)
 * [Development](#Development)
 * [Usage](#Usage)
-    * [Basic Usage](#Basic Usage)
-    * [Trailing/Leading Edge](#TrailingOrLeadingEdge)
-    * [React/Hooks](#ReactHooks)
+    * [Basic Usage](#Basic&#32;Usage)
+    * [Trailing or Leading Edge](#Trailing&#32;or&#32;LeadingEdge)
+    * [React Hooks](#React&#32;Hooks)
     * [API](#API)
 
 ## Installation
@@ -46,7 +46,7 @@ const throttled = throttle(myExpensiveTask, {
 });
 ```
 
-#### React
+#### React Hooks
 For use with React, pass to `useCallback` or `useMemo` to avoid recreating the throttled function on each render.
 
 ```jsx
