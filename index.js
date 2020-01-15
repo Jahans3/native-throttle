@@ -3,7 +3,7 @@ module.exports = function throttle(func, {
   leading = true,
   trailing = false,
   context = this,
-}) {
+} = {}) {
   let wait = false;
   let lastSuccessfulCall = new Date().getTime();
 
