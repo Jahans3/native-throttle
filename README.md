@@ -49,6 +49,8 @@ const throttled = throttle(myExpensiveTask, {
 #### React
 For simple usage with React a `useThrottle` hook is exposed via the `/react` path.
 
+Note: React is listed as a peer dependency.
+
 ```jsx
 import useThrottle from 'native-throttle/react';
 
