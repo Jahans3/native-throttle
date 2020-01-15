@@ -1,15 +1,15 @@
 # Native Throttle
-Simple, dependency-free throttle function for all JS runtime environments.
+Simple, dependency-free throttle function with support for trailing- and leading-edge calls.
 
-Supports both trailing and leading edge calls.
+Includes a hook for use with React.
 
 * [Installation](#Installation)
-* [Development](#Development)
 * [Usage](#Usage)
     * [Basic Usage](#Basic)
+    * [React Hook](#React)
     * [Trailing / Leading Edge Calls](#Edges)
-    * [React / Hooks](#React)
     * [API](#API)
+* [Development](#Development)
 
 ## Installation
 ```bash
@@ -47,14 +47,13 @@ const throttled = throttle(myExpensiveTask, {
 ```
 
 #### React
-For use with React, pass to `useCallback` or `useMemo` to avoid recreating the throttled function on each render.
+For simple usage with React a `useThrottle` hook is exposed via the `/react` path.
 
 ```jsx
-import { useCallback, useMemo } from 'react';
-import throttle from 'native-throttle';
+import useThrottle from 'native-throttle/react';
 
 function MyComponent() {
-  const throttled = useCallback(throttle(myExpensiveFunc), { limit: 300 });
+  const throttled = useThrottle(myExpensiveFunc, { limit: 300 });
   return <button onClick={throttled}>Click me!</button>;
 }
 ```

@@ -12,5 +12,8 @@
   },
   "scripts": {
     "test": "jest"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0"
   }
 }
