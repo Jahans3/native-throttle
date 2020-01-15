@@ -6,7 +6,8 @@ Supports both trailing and leading edge calls.
 * [Installation](#Installation)
 * [Development](#Development)
 * [Usage](#Usage)
-    * [Trailing/Leading Edge](#TrailingLeadingEdge)
+    * [Basic Usage](#Basic Usage)
+    * [Trailing/Leading Edge](#TrailingOrLeadingEdge)
     * [React/Hooks](#ReactHooks)
     * [API](#API)
 
@@ -30,7 +31,7 @@ function myExpensiveTask() { /*...*/ }
 const throttled = throttle(myExpensiveTask);
 ```
 
-#### Trailing/Leading Edge
+#### Trailing or Leading Edge
 Can invoke the function on the trailing or leading edge of the given time period.
 
 Default is leading edge.
@@ -45,7 +46,7 @@ const throttled = throttle(myExpensiveTask, {
 });
 ```
 
-#### React/Hooks
+#### React
 For use with React, pass to `useCallback` or `useMemo` to avoid recreating the throttled function on each render.
 
 ```jsx
