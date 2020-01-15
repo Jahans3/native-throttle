@@ -6,9 +6,9 @@ Supports both trailing and leading edge calls.
 * [Installation](#Installation)
 * [Development](#Development)
 * [Usage](#Usage)
-    * [Basic Usage](#Basic%20Usage)
-    * [Trailing or Leading Edge](#Trailing%20or%20LeadingEdge)
-    * [React Hooks](#React%20Hooks)
+    * [Basic Usage](#Basic)
+    * [Trailing / Leading Edge Calls](#Edges)
+    * [React / Hooks](#React)
     * [API](#API)
 
 ## Installation
@@ -23,7 +23,7 @@ import throttle from 'native-throttle'; // ESM
 const throttle = require('native-throttle'); // CJS
 ```
 
-#### Basic Usage
+#### Basic
 Default time limit is 300ms.
 
 ```js
@@ -31,7 +31,7 @@ function myExpensiveTask() { /*...*/ }
 const throttled = throttle(myExpensiveTask);
 ```
 
-#### Trailing or Leading Edge
+#### Edges
 Can invoke the function on the trailing or leading edge of the given time period.
 
 Default is leading edge.
@@ -46,7 +46,7 @@ const throttled = throttle(myExpensiveTask, {
 });
 ```
 
-#### React Hooks
+#### React
 For use with React, pass to `useCallback` or `useMemo` to avoid recreating the throttled function on each render.
 
 ```jsx
