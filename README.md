@@ -34,6 +34,8 @@ const throttled = throttle(myExpensiveTask);
 #### Edges
 Can invoke the function on the trailing or leading edge of the given time period.
 
+Setting `leading: false` will trigger trailing edge calls.
+
 Default is leading edge.
 
 ```js
@@ -42,7 +44,7 @@ const throttled = throttle(myExpensiveTask, {
 });
 
 const throttled = throttle(myExpensiveTask, {
-  trailing: true
+  leading: false
 });
 ```
 
@@ -73,14 +75,9 @@ const options = {
   // Default: 300
   limit: Number,
 
-  // Calls functions on the leading edge of time limit
+  // Calls functions on the leading edge of time limit if `true`, trailing edge if `false`
   // Default: true
   leading: Boolean,
-
-  // Calls functions on the trailing of time limit
-  // Note: If leading and trailing are true, trailing takes precedence
-  // Default: false
-  trailing: Boolean,
 
   // Advanced: Context in which the throttled function should be called
   // Note: This should be unnecessary in most cases but exists to handle edge cases

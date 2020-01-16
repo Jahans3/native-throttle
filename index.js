@@ -1,7 +1,6 @@
 module.exports = function throttle(func, {
   limit = 300,
   leading = true,
-  trailing = false,
   context = this,
 } = {}) {
   let wait = false;
@@ -11,7 +10,7 @@ module.exports = function throttle(func, {
     const callTime = new Date().getTime();
     let result;
 
-    if (leading && !trailing) {
+    if (leading) {
       result = func.call(context, ...args);
     }
 
@@ -19,7 +18,7 @@ module.exports = function throttle(func, {
       wait = false;
     }, limit);
 
-    if (trailing && (callTime - lastSuccessfulCall) > limit) {
+    if (!leading && (callTime - lastSuccessfulCall) > limit) {
       result = func.call(context, ...args);
       lastSuccessfulCall = callTime;
     }

@@ -56,7 +56,7 @@ describe('throttle', () => {
 
   it('should call the throttled function after time limit has expired if using trailing edge calls', () => {
     const mockFunc = jest.fn();
-    const throttledFunc = throttle(mockFunc, { limit: 1000, trailing: true });
+    const throttledFunc = throttle(mockFunc, { limit: 1000, leading: false });
 
     throttledFunc();
 
